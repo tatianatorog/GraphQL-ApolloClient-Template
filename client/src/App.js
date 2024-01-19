@@ -2,6 +2,7 @@
 import "./App.css";
 import React from 'react'; 
 import GetUsers1 from "./Components/GetUsers1";
+import Form from "./Components/Form1";
 // Import the necessary modules from Apollo Client
 import {
     ApolloClient,
@@ -43,6 +44,7 @@ function App() {
         <ApolloProvider client={client}>
             <div className="App">
                 <h1>Test</h1>
+                <Form/>
                 <GetUsers1 />
             </div>
         </ApolloProvider>
