@@ -10,6 +10,9 @@ function Form() {
 
   const [createUser, { error }] = useMutation(CREATE_USER_MUTATION);
 
+  const [ createPerson] = useMutation(CREATE_USER_MUTATION),{
+        refetchQueries: [{ query: GET_USERS_QUERY }]
+    };
   const addUser = () => {
     createUser({
       variables: {
